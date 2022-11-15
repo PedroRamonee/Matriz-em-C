@@ -1,13 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
-// Pedro Corrêa INFO-1 exercicio 6
+// Pedro CorrÃªa INFO-1 exercicio 6
+
+/* Uma matriz Ã© denominada de Matriz Identidade se ela
+for uma matriz quadrada especial cujos elementos diagonais principais sÃ£o iguais a 1 e os demais
+elementos sÃ£o 0, como a seguir:
+	
+	1	0	0
+	0	1	0
+	0	0	1	(Matriz Identidade)			*/
+
 
 int main() {
 	
 	int i, j, num, k = 0, l = 0;
 	int matriz1[100][100];
 	
-	// Solicitação e leitura do tamanho da Matriz
+	// SolicitaÃ§Ã£o e leitura do tamanho da Matriz
 	printf("Digite o  tamanho da matriz desejada (1x1, 2x2, 3x3): ");
 	scanf("%d", &num);
 	
@@ -16,14 +25,14 @@ int main() {
 	for(i=0; i < num; i++){
 		for(j=0; j< num; j++){
 			
-			// Solicitação e Leitura básica da Matriz 1
+			// SolicitaÃ§Ã£o e Leitura bÃ¡sica da Matriz 1
 			printf("Element - [%d],[%d] = ",i,j);
 			scanf("%d", &matriz1[i][j]);
 				
 		}
 		
 	}
-		// Impressão da Matriz
+		// ImpressÃ£o da Matriz
 	printf("\n Matriz 1 : \n\n");
 	
 	for(i=0; i < num; i++){
@@ -35,18 +44,18 @@ int main() {
 		
 			printf("%d\t", matriz1[i][j]);
 			
-			/* Teste para saber a posição da matriz, caso i == j, é a posição da diagonal*/
+			/* Teste para saber a posiÃ§Ã£o da matriz, caso i == j, Ã© a posiÃ§Ã£o da diagonal*/
 			if ( i == j){
-				// testa pra ver se a posição da diagonal é igual a 1
+				// testa pra ver se a posiÃ§Ã£o da diagonal Ã© igual a 1
 				if ( matriz1[i][j] == 1 ){
 					// caso seja igual a 1 adiciona 1 a variavel K
 					k++;
 				}
 				
 			}
-			/* Teste para saber a posição da matriz, caso i != j, não é a posição da diagonal*/
+			/* Teste para saber a posiÃ§Ã£o da matriz, caso i != j, nÃ£o Ã© a posiÃ§Ã£o da diagonal*/
 			if ( i != j){
-				// testa pra ver se a posição é igual a 0
+				// testa pra ver se a posiÃ§Ã£o Ã© igual a 0
 				if ( matriz1[i][j] == 0){
 					// caso seja 0 adiciona 1 a L
 					l++;
@@ -57,12 +66,12 @@ int main() {
 		
 	}
 	
-	// Se K for igual ao numero de linha e L for igual a o numero de linha vezes o numero de linhas menos 1, a matriz é indentidade
+	// Se K for igual ao numero de linha e L for igual a o numero de linha vezes o numero de linhas menos 1, a matriz Ã© indentidade
 	if( k == num && l == (num * (num - 1))){
 		
 		printf(" \n  \n Matriz indentidade");
 	}
-	// caso não seja a matriz não é identidade
+	// caso nÃ£o seja a matriz nÃ£o Ã© identidade
 	else {
 		
 		printf(" \n \n Nao e matriz indentidade");
